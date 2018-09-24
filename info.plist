@@ -18,6 +18,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>51A953FB-0819-4905-9E40-EFA2479B54C1</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open note in new window</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</key>
 		<array>
@@ -56,6 +66,25 @@
 	<string>Bear</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>bear://x-callback-url/open-note?id={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A5A16924-B144-4D1A-8E47-FBA4467F58A7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -111,14 +140,14 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>bear://x-callback-url/open-note?id={query}</string>
+				<string>bear://x-callback-url/open-note?id={query}&amp;new_window=yes&amp;show_window=no</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>A5A16924-B144-4D1A-8E47-FBA4467F58A7</string>
+			<string>51A953FB-0819-4905-9E40-EFA2479B54C1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -270,23 +299,6 @@ fi</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  -- your script here
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>5ADEB109-2C47-4611-B75E-8B710AD3329D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string># Bear Alfred Workflow
@@ -315,45 +327,51 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 		</dict>
 		<key>34803D0C-B70E-4032-96FA-E0A5E179236A</key>
 		<dict>
+			<key>note</key>
+			<string>Open in main window</string>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>350</integer>
 		</dict>
-		<key>5ADEB109-2C47-4611-B75E-8B710AD3329D</key>
+		<key>51A953FB-0819-4905-9E40-EFA2479B54C1</key>
 		<dict>
+			<key>note</key>
+			<string>Open in main window</string>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>520</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>150</integer>
 		</dict>
 		<key>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>560</integer>
 		</dict>
 		<key>A10CF1DB-F3D4-4248-A45A-0954FE2C61E7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>350</integer>
 		</dict>
 		<key>A5A16924-B144-4D1A-8E47-FBA4467F58A7</key>
 		<dict>
+			<key>note</key>
+			<string>Open in main window</string>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>10</integer>
 		</dict>
 		<key>B7C7DDC1-B797-4FF0-8AA0-0362C306C19A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>560</integer>
 		</dict>
 	</dict>
 	<key>version</key>
