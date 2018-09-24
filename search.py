@@ -96,6 +96,10 @@ def execute_search_query(args):
 
     else:
         LOGGER.debug('Searching notes')
+
+        # Substitute % in for spaces to make more flexible search
+        query = query.replace(" ", "%")
+        
         title_results = queries.search_notes_by_title(WORKFLOW, LOGGER, query)
         text_results = queries.search_notes_by_text(WORKFLOW, LOGGER, query)
         if not title_results and not text_results:
