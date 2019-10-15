@@ -42,6 +42,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>51A953FB-0819-4905-9E40-EFA2479B54C1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>30BC7933-7524-4289-8C83-0D03B97C57CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</key>
 		<array>
 			<dict>
@@ -60,6 +73,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>34803D0C-B70E-4032-96FA-E0A5E179236A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A5A16924-B144-4D1A-8E47-FBA4467F58A7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>30BC7933-7524-4289-8C83-0D03B97C57CD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,7 +113,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>bear://x-callback-url/open-note?id={query}</string>
+				<string>bear://x-callback-url/open-note?id={query}&amp;edit=yes</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -105,6 +131,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -143,7 +171,24 @@
 			<key>uid</key>
 			<string>1A741966-5341-40BC-996D-68EAB30F62AA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+	tell application "System Events"		key code 126 using {command down}	end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>30BC7933-7524-4289-8C83-0D03B97C57CD</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -202,6 +247,8 @@ fi</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -240,6 +287,29 @@ fi</string>
 			<key>uid</key>
 			<string>A10CF1DB-F3D4-4248-A45A-0954FE2C61E7</string>
 			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "bear://x-callback-url/create?{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B7C7DDC1-B797-4FF0-8AA0-0362C306C19A</string>
+			<key>version</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
@@ -249,6 +319,8 @@ fi</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -287,30 +359,7 @@ fi</string>
 			<key>uid</key>
 			<string>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</string>
 			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "bear://x-callback-url/create?{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B7C7DDC1-B797-4FF0-8AA0-0362C306C19A</string>
-			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -408,6 +457,15 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 			<key>ypos</key>
 			<integer>730</integer>
 		</dict>
+		<key>30BC7933-7524-4289-8C83-0D03B97C57CD</key>
+		<dict>
+			<key>note</key>
+			<string>Move cursor to top of window</string>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>65</integer>
+		</dict>
 		<key>34803D0C-B70E-4032-96FA-E0A5E179236A</key>
 		<dict>
 			<key>note</key>
@@ -431,7 +489,7 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 			<key>note</key>
 			<string>View all notes and activate note search</string>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>525</integer>
 			<key>ypos</key>
 			<integer>730</integer>
 		</dict>
