@@ -209,7 +209,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>bst</string>
+				<string>bt</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -386,7 +386,7 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 
 ## Searching and opening results 
 - `bs` -- Search for a note by title and open it in Bear.
-- `bst` -- Search for a tag (a group of notes) by tag title and open it in Bear.
+- `bt` -- Search for a tag (a group of notes) by tag title and open it in Bear.
 
 ## Creating a new note
 - `bn` -- Create a new note with input as title. Tags optional.
