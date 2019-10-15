@@ -6,11 +6,11 @@
 To install, download a [released alfred-bear workflow](https://github.com/chrisbro/alfred-bear/releases/download/0.3.5/alfred-bear.alfredworkflow) and double-click to open in Alfred. Easy-peasy.
 
 ## Searching and opening results 
-`bs` -- Search for a note by title/content and open it in Bear.
+`b` -- Search for a note by title/content and open it in Bear.  Command-return opens the note in a new window.
 
 ![](bs.png)
 
-`bst` -- Search for a tag (a group of notes) by tag title and open it in Bear.
+`bt` -- Search for a tag (a group of notes) by tag title and open it in Bear.
 
 ![](bst.png)
 
