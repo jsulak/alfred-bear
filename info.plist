@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.chrisbro.bear</string>
+	<string>com.jamessulak.bear</string>
 	<key>connections</key>
 	<dict>
 		<key>1A741966-5341-40BC-996D-68EAB30F62AA</key>
@@ -25,6 +25,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open note in new window</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>27301AF7-4617-48C3-A798-F5C46DA6041F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>68A44B4F-190D-41C3-ACC9-7E288337B311</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -57,7 +70,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Chris Brown</string>
+	<string>Chris Brown (adapted by James Sulak)</string>
 	<key>description</key>
 	<string>Search and create Bear notes from Alfred</string>
 	<key>disabled</key>
@@ -99,7 +112,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>bs</string>
+				<string>b</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -140,7 +153,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>bear://x-callback-url/open-note?id={query}&amp;new_window=yes&amp;show_window=no</string>
+				<string>bear://x-callback-url/open-note?id={query}&amp;new_window=yes&amp;show_window=no&amp;edit=yes</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -299,6 +312,69 @@ fi</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>53</integer>
+				<key>hotmod</key>
+				<integer>1048576</integer>
+				<key>hotstring</key>
+				<string>⎋</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>net.shinyfrog.bear</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>27301AF7-4617-48C3-A798-F5C46DA6041F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+	tell application "System Events" to tell process "Bear"
+		tell menu bar 1
+			tell menu bar item "View"
+				tell menu "View"
+					click menu item "Show All Notes"
+				end tell
+			end tell
+		end tell
+	end tell
+
+	tell application "System Events"		keystroke "f" using {command down, shift down}
+		key code 51	end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>68A44B4F-190D-41C3-ACC9-7E288337B311</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string># Bear Alfred Workflow
@@ -325,6 +401,13 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
+		<key>27301AF7-4617-48C3-A798-F5C46DA6041F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>730</integer>
+		</dict>
 		<key>34803D0C-B70E-4032-96FA-E0A5E179236A</key>
 		<dict>
 			<key>note</key>
@@ -337,11 +420,20 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 		<key>51A953FB-0819-4905-9E40-EFA2479B54C1</key>
 		<dict>
 			<key>note</key>
-			<string>Open in main window</string>
+			<string>Open in new window</string>
 			<key>xpos</key>
 			<integer>520</integer>
 			<key>ypos</key>
 			<integer>150</integer>
+		</dict>
+		<key>68A44B4F-190D-41C3-ACC9-7E288337B311</key>
+		<dict>
+			<key>note</key>
+			<string>View all notes and activate note search</string>
+			<key>xpos</key>
+			<integer>540</integer>
+			<key>ypos</key>
+			<integer>730</integer>
 		</dict>
 		<key>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</key>
 		<dict>
@@ -377,6 +469,6 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 	<key>version</key>
 	<string>0.3.3</string>
 	<key>webaddress</key>
-	<string>https://github.com/chrisbro/alfred-bear</string>
+	<string>https://github.com/jsulak/alfred-bear</string>
 </dict>
 </plist>
