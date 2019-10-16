@@ -94,6 +94,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CB59706E-CBD1-46B9-B4B1-49CD5F57EC17</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>04FF7AC0-5B1F-49E2-969F-945AE99890A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Chris Brown (adapted by James Sulak)</string>
@@ -212,37 +225,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>orig_query={query}
-echo $orig_query
-if [[ $orig_query == ":t:"* ]]; then
-	new_query=${orig_query:3}
-	open "bear://x-callback-url/open-tag?name=$new_query"
-else
-	new_query=${orig_query:3}
-	open "bear://x-callback-url/open-note?id=$new_query"
-fi</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>34803D0C-B70E-4032-96FA-E0A5E179236A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -297,7 +279,15 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open "bear://x-callback-url/create?{query}"</string>
+				<string>orig_query={query}
+echo $orig_query
+if [[ $orig_query == ":t:"* ]]; then
+	new_query=${orig_query:3}
+	open "bear://x-callback-url/open-tag?name=$new_query"
+else
+	new_query=${orig_query:3}
+	open "bear://x-callback-url/open-note?id=$new_query"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -308,7 +298,7 @@ fi</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B7C7DDC1-B797-4FF0-8AA0-0362C306C19A</string>
+			<string>34803D0C-B70E-4032-96FA-E0A5E179236A</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -360,6 +350,73 @@ fi</string>
 			<string>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "bear://x-callback-url/create?{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B7C7DDC1-B797-4FF0-8AA0-0362C306C19A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "bear://x-callback-url/create?new_window=yes&amp;edit=yes&amp;text=# &amp;show_window=no"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>04FF7AC0-5B1F-49E2-969F-945AE99890A6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>newbn</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Create blank note</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CB59706E-CBD1-46B9-B4B1-49CD5F57EC17</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -443,6 +500,15 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 	- `bn I love notes! #love #notes` -- Creates a new note with the title and text "*I love notes!*" and the tags "*#love*" and "*#notes*"</string>
 	<key>uidata</key>
 	<dict>
+		<key>04FF7AC0-5B1F-49E2-969F-945AE99890A6</key>
+		<dict>
+			<key>note</key>
+			<string>Create blank note</string>
+			<key>xpos</key>
+			<integer>525</integer>
+			<key>ypos</key>
+			<integer>720</integer>
+		</dict>
 		<key>1A741966-5341-40BC-996D-68EAB30F62AA</key>
 		<dict>
 			<key>xpos</key>
@@ -453,9 +519,9 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 		<key>27301AF7-4617-48C3-A798-F5C46DA6041F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>890</integer>
 		</dict>
 		<key>30BC7933-7524-4289-8C83-0D03B97C57CD</key>
 		<dict>
@@ -489,9 +555,9 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 			<key>note</key>
 			<string>View all notes and activate note search</string>
 			<key>xpos</key>
-			<integer>525</integer>
+			<integer>530</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>890</integer>
 		</dict>
 		<key>74B5AEA1-6AFC-4867-A76D-0FD11694A60D</key>
 		<dict>
@@ -522,6 +588,13 @@ To install, download a released alfred-bear.alfredworkflow and double-click to o
 			<integer>520</integer>
 			<key>ypos</key>
 			<integer>560</integer>
+		</dict>
+		<key>CB59706E-CBD1-46B9-B4B1-49CD5F57EC17</key>
+		<dict>
+			<key>xpos</key>
+			<integer>275</integer>
+			<key>ypos</key>
+			<integer>720</integer>
 		</dict>
 	</dict>
 	<key>version</key>
